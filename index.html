@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buon Compleanno</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        // Función para cambiar el color del Label cada 500 ms
+        function cambiarColor() {
+            const lblCompleanno = document.getElementById('lblCompleanno');
+            const colores = ["red", "blue", "green", "orange", "purple", "pink"];
+            let indice = 0;
+
+            setInterval(() => {
+                lblCompleanno.style.color = colores[indice];
+                indice = (indice + 1) % colores.length; // Cambiar al siguiente color
+            }, 500);
+        }
+
+        // Función para mostrar el mensaje de cumpleaños
+        function mostrarMensaje() {
+            document.getElementById('lblCompleanno').style.display = 'block';
+            document.getElementById('titulo').style.display = 'none';
+            cambiarColor(); // Iniciar cambio de color
+        }
+    </script>
+</head>
+<body style="background-image: url(Imagenes/FondoCumple.jpg);">
+    <div class="container text-center mt-5">
+        <!-- Etiqueta de título -->
+        <h1 id="titulo" style="color: red; font-family:Georgia, 'Times New Roman', Times, serif;">Tocca questa torta</h1>
+
+        <!-- Botón de imagen -->
+        <button onclick="mostrarMensaje()" style="border: none; background: transparent; cursor: pointer;">
+            <img src="Imagenes/TortaCumpleaños.png" alt="Torta di Compleanno" style="max-width: 100%; height: 300px;">
+        </button>
+
+        <!-- Mensaje de cumpleaños (inicialmente oculto) -->
+        <h2 id="lblCompleanno" style="display: none;">Buon Compleanno <br> Alessandra :)</h2>
+    </div>
+</body>
+</html>
