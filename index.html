@@ -28,20 +28,24 @@
         }
     </script>
     <style>
-        /* Media query para pantallas pequeñas (celulares) */
+        
     #LogoPortofranco
     {
+        max-width: 100%; 
+        height: 100px;
+        display: none;
         margin-left:35%; 
         margin-top:1%;
     }
         
+    /* Media query para pantallas pequeñas (celulares) */
         @media (max-width: 576px) 
     {
         #LogoPortofranco {
             max-width:100%;
             height: 80px;         /* Un poco más pequeño */
+            display: none;
             margin-left: 3%;    
-            display: none; 
             /* margin-left:35%; margin-top:1%; */
         }
     }
@@ -59,7 +63,7 @@
 
         <!-- Mensaje de cumpleaños (inicialmente oculto) -->
         <h2 id="lblCompleanno" style="display: none;">Buon Compleanno <br> Enrica :)</h2>
-        <img id="LogoPortofranco" src="Imagenes/LogoEnricaCompleanno.png" alt="" style="max-width: 100%; height: 100px;display: none;">
+        <img id="LogoPortofranco" src="Imagenes/LogoEnricaCompleanno.png" alt="">
     </div>
 </body>
 </html>
